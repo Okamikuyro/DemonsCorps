@@ -1,0 +1,56 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+}
+
+
+.login {
+    width: 300px;
+    background-color: #800707;
+    color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.login form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.login input, 
+.login button {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+}
+
+.login button {
+    background-color: white;
+    color: #800707;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login a {
+    color: white;
+}
+
+.imagem {
+    background-color: #ccc;
+    background-size: cover;
+    width: 100%;
+}
+
+.imagem img {
+  width: 100%;      
+  height: auto;      
+  display: block;
+}
