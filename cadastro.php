@@ -1,3 +1,8 @@
+<?php
+if (isset($_GET['erro']) && $_GET['erro'] == 'cpf_existe') {
+    echo "<script>alert('ERRO: Usuario com CPF cadastrado ja cadastrado foi encontrado');</script>";
+}
+?>
 <!DOCTYPE html>
 <html>
 <head><title>DemonsCorps - Cadastro</title><link rel="stylesheet" href="cadastro.css"></head>
@@ -7,13 +12,13 @@
         <h2>DemonsCorps</h2>
         <h1>Cadastrar</h1>
         <form action="Controle_PHP.php" method="post">
-            <input type="text" name="Nome" placeholder="Nome Completo" minlength="3" required>
-            <input type="text" id= "CPF" name="CPF" placeholder="CPF" minlength="14" required>
-            <input type="text" name="Endereco" placeholder="Endereço" minlength="5" required>
-            <input type="text" name="Bairro" placeholder="Bairro" minlength="2" required>
-            <input type="text" name="Cidade" placeholder="Cidade" minlength="2" required>
-            <input type="text" name="Estado" placeholder="Estado" minlength="2" required>
-            <input type="text" id= "CEP" name="CEP" placeholder="CEP" minlength="9" required>
+            <input type="text" name="Nome" placeholder="Nome Completo" minlength="3" maxlength="90" required>
+            <input type="text" id= "CPF" name="CPF" placeholder="CPF" minlength="14" maxlength="14" required>
+            <input type="text" name="Endereco" placeholder="Endereço" minlength="5" maxlength="90" required>
+            <input type="text" name="Bairro" placeholder="Bairro" minlength="2" maxlength="90" required>
+            <input type="text" name="Cidade" placeholder="Cidade" minlength="2" maxlength="90" required>
+            <input type="text" name="Estado" placeholder="Estado" minlength="2" maxlength="90" required>
+            <input type="text" id= "CEP" name="CEP" placeholder="CEP" minlength="9" maxlength="9" required>
             
             <input type="submit" name="BC" value="Cadastrar">
         </form>

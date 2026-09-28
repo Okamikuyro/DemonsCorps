@@ -13,7 +13,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
-   /* Topo / Cabeçalho */
+   
 header {
     background-color: #800707;
     color: #fff;
@@ -34,6 +34,97 @@ header nav a:hover {
     color:darkgray;
 }
 
+.categories-nav {
+    background-color: #9e1a1a;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.categories-nav a {
+    color: #555;
+    background-color: transparent;
+    transition: background-color 0.3s, color 0.3s; 
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.nav-item {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px; 
+}
+
+.texto-info {
+    color: #fff;
+    font-weight: bold;
+    padding: 8px 1px;
+    display: inline-block;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.nav-item:hover .texto-info {
+    color: #e76868; 
+}
+
+.sub-navbar {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #9e1a1a;
+    padding: 12px 15px;
+    border-radius: 0 0 5px 5px;
+    z-index: 10;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+}
+
+
+.sub-navbar a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 6px 10px;
+    white-space: nowrap; 
+    width: max-content; 
+    max-width: 90vw;
+}
+
+.sub-navbar a:hover {
+    color: #fff;
+    background-color: #800707;
+    border-radius: 3px;
+}
+
+
+.nav-item:hover .sub-navbar {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(160px, auto)); 
+    gap: 8px 100px; 
+}
+
+.titulo-categoria {
+    text-align: center;
+    color:  #c7b0b0;                 
+    background-color: #9e1a1a;      
+    margin: 30px auto 40px auto;    
+    padding: 10px 25px;              
+    border-radius: 8px;              
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+.parent {
+    margin-top: 10px;
+}
+
    
 footer {
     background-color: #800707;
@@ -43,6 +134,12 @@ footer {
     margin-top: auto;
     }
 
+.img-produto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
 
 .foto-produto {
     height: 250px;
@@ -107,8 +204,6 @@ footer {
     background-color: #5d0404;
 }
 
-
-
 .btn-carrinho {
     background: none !important;
     background-color: transparent !important;
@@ -127,31 +222,6 @@ footer {
     color:darkgray
 }
 
-
-.categories-nav {
-    background-color: #fff;
-    padding: 10px 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #e0e0e0;
-}
-
-.categories-nav a {
-    color: #555;
-    background-color: transparent;
-    transition: background-color 0.3s, color 0.3s; 
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.categories-nav a:hover {
-    color: #e50808;
-}
-
-
-
 .parent {
     display: grid;
     grid-template-columns: repeat(5, 1fr); 
@@ -160,10 +230,75 @@ footer {
 }
 
 .card-produto {
-    border: 2px dashed #800707;
+    border: 2px groove #800707;
     border-radius: 8px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
 }
 
+.container-carrinho {
+    width: 100%;             /* Ocupa toda a largura da tela */
+    margin: 0 auto;          /* Remove espaço em cima/lados */
+    padding: 20px;           /* Espaçamento interno suave nas bordas da tela */
+    box-sizing: border-box;  /* Impede que a tabela ultrapasse a tela */
+    color: #fff;
+}
+
+.tabela-carrinho {
+    width: 100%;             /* Tabela esticada de ponta a ponta */
+    border-collapse: collapse;
+    background: #6c1414;
+}
+
+.tabela-carrinho th {
+    background: #9e1a1a;
+    padding: 10px;
+}
+
+.tabela-carrinho td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+.img-carrinho {
+    width: 50px;
+    height: 50px;
+}
+
+.tabela-carrinho input[type="number"] {
+    width: 45px;
+    background:#be5252;
+    color: #fff;
+    border: 1px solid #9e1a1a;
+    text-align: center;
+}
+
+.btn-remover {
+    color: #ff4d4d;
+    text-decoration: none;
+}
+
+.resumo-carrinho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    background: #9e1a1a;
+    padding: 15px;
+}
+
+.btn-comprar {
+    background: #9e1a1a;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.carrinho-vazio {
+    text-align: center;
+    color: #000;
+    margin-top: 50px;
+}
