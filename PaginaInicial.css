@@ -139,6 +139,7 @@ footer {
     height: 100%;
     object-fit: cover;
     display: block;
+    object-fit: cover;
 }
 
 .foto-produto {
@@ -238,15 +239,15 @@ footer {
 }
 
 .container-carrinho {
-    width: 100%;             /* Ocupa toda a largura da tela */
-    margin: 0 auto;          /* Remove espaço em cima/lados */
-    padding: 20px;           /* Espaçamento interno suave nas bordas da tela */
-    box-sizing: border-box;  /* Impede que a tabela ultrapasse a tela */
+    width: 100%;             
+    margin: 0 auto;         
+    padding: 20px;           
+    box-sizing: border-box;  
     color: #fff;
 }
 
 .tabela-carrinho {
-    width: 100%;             /* Tabela esticada de ponta a ponta */
+    width: 100%;            
     border-collapse: collapse;
     background: #6c1414;
 }
